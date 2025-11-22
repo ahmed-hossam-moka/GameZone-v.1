@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome – Game Zone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-text">
+            <a href="index.html">GAME ZONE</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="./About/about.html">About</a>
+        </nav>
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="./About/about.html">About</a>
+    </div>
+
+    <!-- Main Welcome Section -->
+    <section class="welcome">
+        <h1 class="top-title">WELCOME</h1>
+        <h2 class="stage-title">To The Game Zone :)</h2>
+
+        <div class="hero">
+            <form onsubmit="saveName(); return false;">
+                <input type="text" class="playername" id="playername" placeholder="Enter your name" required>
+                <br>
+                <button class="explore-button" type="submit">Explore Games</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="./logos/branchLogo.png" class="ieee-logo" alt="IEEE Logo">
+        </div>
+
+        <div class="footer-right">
+            <img src="./logos/comunityLogo.png" class="ieee-logo" alt="IEEE CS Logo">
+        </div>
+    </footer>
+
+<script>
+function saveName() {
+    let name = document.getElementById("playername").value;
+    localStorage.setItem("username", name);
+    window.location.href = "Games/games.html";
+}
+
+function toggleMenu() {
+    document.getElementById("mobile-menu").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>

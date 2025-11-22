@@ -1,0 +1,170 @@
+/* ----- General ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #F9A826;
+    color: #472f18;
+}
+
+/* ----- Header ----- */
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7a01f;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.logo-text a {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #f7a01f;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    padding: 12px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* ----- Welcome Section ----- */
+.welcome {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.top-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.stage-title {
+    font-size: 32px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #fffbe9;
+}
+
+.hero {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- About Section ----- */
+.about-content {
+    max-width: 700px;
+    background: #ffffffdd;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----- Footer ----- */
+footer {
+    margin-top: 100px;
+    background: #f3951d;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ieee-logo {
+    width: 300px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .top-title {
+        font-size: 45px;
+    }
+
+    .stage-title {
+        font-size: 22px;
+    }
+
+    .about-content {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .ieee-logo {
+        width: 180px;
+    }
+}

@@ -1,0 +1,217 @@
+/* ----- General ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #F9A826;
+    color: #472f18;
+}
+
+/* ----- Header ----- */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3951d;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.logo-text {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Desktop Nav */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobile Slide Menu */
+.mobile-menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: #f7a01f;
+    width: 100%;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.mobile-menu a {
+    font-size: 22px;
+    color: white;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* ----- Welcome Section ----- */
+.welcome {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.top-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.stage-title {
+    font-size: 32px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #fffbe9;
+}
+
+/* ----- Games Grid ----- */
+.games-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Game Card */
+.game-card {
+    background: #ffffffdd;
+    padding: 20px;
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    backdrop-filter: blur(4px);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #472f18;
+}
+
+.explore-button {
+    background: #f3951d;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    transform: scale(1.05);
+}
+
+/* ----- Footer ----- */
+footer {
+    margin-top: 100px;
+    background: #f3951d;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ieee-logo {
+    width: 250px;
+    max-width: 90%;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .top-title {
+        font-size: 45px;
+    }
+
+    .stage-title {
+        font-size: 26px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .top-title {
+        font-size: 36px;
+    }
+
+    .stage-title {
+        font-size: 22px;
+    }
+
+    .game-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Game Zone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-text">
+            <a href="../index.html">GAME ZONE</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../Games/games.html">Games</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../Games/games.html">Games</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <!-- About Section -->
+    <section class="welcome">
+        <h1 class="top-title">ABOUT US</h1>
+        <h2 class="stage-title">Learn More About Game Zone</h2>
+
+        <div class="hero">
+            <div class="about-content">
+                <p>
+                    Welcome to Game Zone! We are passionate about bringing fun and engaging games
+                    to players of all ages. Our mission is to create a safe, exciting, and interactive
+                    gaming environment where everyone can enjoy and challenge themselves.
+                </p>
+                <p>
+                    Explore our wide variety of games, stay up to date with the latest trends, and
+                    join our community of gamers. Whether you are here for casual play or competitive
+                    gaming, Game Zone has something for you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="../logos/branchLogo.png" class="ieee-logo" alt="IEEE Logo">
+        </div>
+
+        <div class="footer-right">
+            <img src="../logos/comunityLogo.png" class="ieee-logo" alt="IEEE CS Logo">
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>

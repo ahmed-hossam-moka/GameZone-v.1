@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header>
+        <div class="logo-text">
+            <a href="../index.html">GAME ZONE</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../Games/games.html">Games</a>
+            <a href="../About/about.html">About</a>
+        </nav>
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../Games/games.html">Games</a>
+        <a href="../About/about.html">About</a>
+    </div>
+    <main>
+        <div class="game-container">
+            <div class="game-info">
+                <h2>2 Player Game</h2>
+                <p id="status">Player X's turn</p>
+                <div class="score-board">
+                    <div class="score">
+                        <span>Player X</span>
+                        <span id="score-x">0</span>
+                    </div>
+                    <div class="score">
+                        <span>Player O</span>
+                        <span id="score-o">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            
+            <div class="controls">
+                <button id="reset-btn">Reset Game</button>
+                <button id="new-game-btn">New Game</button>
+            </div>
+        </div>
+    </main>
+
+      <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div><img src="../logos/branchLogo.png" class="ieee-logo" alt="IEEE Logo"></div>
+        </div>
+
+        <div class="footer-right">
+            <div><img src="../logos/comunityLogo.png" class="ieee-logo" alt="IEEE CS Logo"></div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+      <script>    // Mobile Menu
+    function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("open");
+    }</script>
+</body>

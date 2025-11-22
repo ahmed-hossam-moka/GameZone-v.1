@@ -1,0 +1,242 @@
+/* ----- General ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+body {
+    background: #F9A826;
+    color: #472f18;
+}
+
+/* ----- Header ----- */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7a01f;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.logo-text {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Desktop Nav */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* ----- Mobile Slide Menu ----- */
+.mobile-menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: #f7a01f;
+    width: 100%;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 15px;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 20px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* ----- Welcome Section ----- */
+.welcome {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.top-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.stage-title {
+    font-size: 32px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #fffbe9;
+}
+
+.hero {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero form {
+    background: #ffffffdd;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 1s ease;
+}
+
+/* Input Field */
+.playername {
+    width: 280px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background: #f6f6f6;
+    transition: 0.3s;
+}
+
+.playername:focus {
+    background: white;
+    box-shadow: 0 0 0 3px #f3951d;
+}
+
+/* Button */
+.explore-button {
+    background: linear-gradient(135deg, #f3951d, #f3951d);
+    color: white;
+    padding: 14px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px #f3951d;
+}
+
+.explore-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 18px #f3951d;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+
+/* ----- Footer ----- */
+footer {
+    margin-top: 100px;
+    background: #f3951d;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ieee-logo {
+    width: 250px;
+    max-width: 90%;
+}
+
+/* -------------------------------------------- Responsive -------------------------------- */
+
+/* Tablets + Mobile */
+@media (max-width: 900px) {
+
+    /* Make logo smaller */
+    .logo-text {
+        font-size: 24px;
+    }
+
+    /* Hide desktop nav */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show mobile menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    .top-title {
+        font-size: 45px;
+    }
+
+    .stage-title {
+        font-size: 26px;
+    }
+
+    .playername {
+        width: 240px;
+        font-size: 16px;
+    }
+
+    .explore-button {
+        padding: 12px 28px;
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 500px) {
+    .top-title {
+        font-size: 36px;
+    }
+
+    .stage-title {
+        font-size: 22px;
+    }
+
+    .hero form {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .playername {
+        width: 100%;
+    }
+}
