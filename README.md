@@ -74,24 +74,7 @@ PAGES/
 
 ---
 
-## 🔗 How to Upload to GitHub
-
-Inside the project folder, run:
-
-```
-git init
-git add .
-git commit -m "Initial Game Zone commit"
-git branch -M main
-git remote add origin YOUR_REPO_URL
-git push -u origin main
-```
-
-Replace 'https://github.com/ahmed-hossam-moka/GameZone/' with your actual repo link.
-
----
-
-## 🧩 Future Improvements (Suggestions)
+## 🧩 Future Will Be Added and Improvements (In the Future)
 
 * Add more games (Snake, Memory card game, etc.)
 * Add sound effects
