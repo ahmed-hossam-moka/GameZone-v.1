@@ -5,22 +5,33 @@
   <meta charset="utf-8">
   <title>2048 – Game Zone</title>
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/style.css" rel="stylesheet" type="text/css">
   <meta name="viewport"
     content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
   <header>
-    <div class="logo-text"><a href="../index.html">GAME ZONE</a> </div>
-    <nav>
+    <div class="logo-text">
+      <a href="../index.html">GAME ZONE</a>
+    </div>
+
+    <nav class="nav-links">
       <a href="../index.html">Home</a>
       <a href="../Games/games.html">Games</a>
       <a href="../About/about.html">About</a>
-
     </nav>
+    
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
   </header>
 
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../Games/games.html">Games</a>
+        <a href="../About/about.html">About</a>
+    </div>
 
 
   <div class="container">
@@ -118,7 +129,12 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+  <script>
+      function toggleMenu() {
+          document.getElementById("mobile-menu").classList.toggle("open");
+      }
+  </script>
+
 </body>
 
 </html>
-
