@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games – Game Zone</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Header -->
     <header>
         <div class="logo-text">
             <a href="../index.html">GAME ZONE</a>
@@ -20,34 +21,29 @@
             <a href="../About/about.html">About</a>
         </nav>
 
-        <!-- Mobile Menu Icon -->
         <div class="menu-icon" onclick="toggleMenu()">
             ☰
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu">
         <a href="../index.html">Home</a>
         <a href="games.html">Games</a>
         <a href="../About/about.html">About</a>
     </div>
 
-    <!-- Games Section -->
     <section class="welcome">
         <h1 class="top-title">OUR GAMES</h1>
         <h2 class="stage-title" id="welcome">Choose Your Game</h2>
 
         <div class="games-container">
 
-            <!-- Game Card 1 -->
             <div class="game-card">
                 <img src="../logos/2048Game.png" alt="Game 1">
                 <h3>2048 Game</h3>
                 <a href="../2048Game/index.html" class="explore-button">Play Now</a>
             </div>
 
-            <!-- Game Card 2 -->
             <div class="game-card">
                 <img src="../logos/xoGame.png" alt="Game 2">
                 <h3>XO Game</h3>
@@ -57,7 +53,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-left">
             <img src="../logos/branchLogo.png" class="ieee-logo" alt="IEEE Logo">
@@ -68,16 +63,15 @@
         </div>
     </footer>
 
-<script>
-    // Get username
-    let name = localStorage.getItem("username");
-    document.getElementById("welcome").innerText = "Choose Your Game " + name + "!";
+    <script>
+        let name = localStorage.getItem("username");
+        document.getElementById("welcome").innerText = "Choose Your Game " + name + "!";
 
-    // Mobile Menu
-    function toggleMenu() {
-        document.getElementById("mobile-menu").classList.toggle("open");
-    }
-</script>
+        function toggleMenu() {
+            document.getElementById("mobile-menu").classList.toggle("open");
+        }
+    </script>
 
 </body>
+
 </html>
