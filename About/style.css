@@ -1,10 +1,10 @@
-/* ----- General ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -15,68 +15,71 @@ body {
     color: #472f18;
 }
 
-/* ----- Header ----- */
 header {
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f7a01f;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    background: #f3951d;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.logo-text a {
+.logo-text {
     color: white;
     font-size: 28px;
     font-weight: 700;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links a {
     color: white;
-    margin-left: 20px;
     font-size: 18px;
     font-weight: 500;
 }
+
 .nav-links a:hover {
     opacity: 0.7;
 }
 
-/* Mobile Menu Icon */
 .menu-icon {
-    display: none;
     font-size: 32px;
     color: white;
     cursor: pointer;
+    display: none;
 }
 
-/* Mobile Menu */
 .mobile-menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    background: #f7a01f;
+    width: 100%;
+    text-align: center;
     display: none;
     flex-direction: column;
-    background: #f7a01f;
-    padding: 20px;
-    position: absolute;
-    width: 100%;
-    top: 90px;
-    left: 0;
-    z-index: 1000;
+    padding: 20px 0;
+    gap: 15px;
 }
 
 .mobile-menu a {
-    padding: 12px 0;
+    font-size: 22px;
     color: white;
-    font-size: 18px;
 }
 
 .mobile-menu.open {
     display: flex;
 }
 
-/* ----- Welcome Section ----- */
 .welcome {
     text-align: center;
     padding: 70px 20px;
+    margin-top: 65px;
 }
 
 .top-title {
@@ -99,7 +102,6 @@ header {
     justify-content: center;
 }
 
-/* ----- About Section ----- */
 .about-content {
     max-width: 700px;
     background: #ffffffdd;
@@ -108,7 +110,7 @@ header {
     text-align: left;
     line-height: 1.8;
     font-size: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s;
 }
 
@@ -116,13 +118,18 @@ header {
     margin-bottom: 20px;
 }
 
-/* Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ----- Footer ----- */
 footer {
     margin-top: 100px;
     background: #f3951d;
@@ -136,13 +143,7 @@ footer {
     width: 300px;
 }
 
-/* ----- Responsive ----- */
 @media (max-width: 768px) {
-
-    header {
-        padding: 15px 25px;
-    }
-
     .nav-links {
         display: none;
     }
@@ -166,5 +167,11 @@ footer {
 
     .ieee-logo {
         width: 180px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 }
