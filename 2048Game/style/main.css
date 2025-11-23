@@ -11,39 +11,68 @@ body {
 }
 
 
+
 header {
-  padding: 20px 50px;
-  margin: 0 auto 30px auto;
+  padding: 20px 40px;
+  background: #f3951d;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f3951d;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-header .logo-text {
+.logo-text a {
   color: white;
   font-size: 28px;
   font-weight: 700;
-}
-
-header nav a {
-  color: white;
-  margin-left: 20px;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
 }
 
-header nav a:hover {
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
   opacity: 0.7;
 }
 
-.heading:after {
-  content: "";
-  display: block;
-  clear: both;
+.menu-icon {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
 }
+
+.mobile-menu {
+  top: 75px;
+  right: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  background: #f3951d;
+  padding: 20px 0;
+}
+
+.mobile-menu a {
+  font-size: 22px;
+  color: white;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+
 
 h1.title {
   font-size: 80px;
@@ -752,9 +781,14 @@ hr {
     font-size: 15px;
   }
 
+
   body {
     margin: 20px 0;
     padding: 0 20px;
+  }
+
+  header {
+    box-shadow: none;
   }
 
   h1.title {
@@ -1045,6 +1079,32 @@ hr {
   .game-message .lower {
     margin-top: 30px !important;
   }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .top-title {
+    font-size: 45px;
+  }
+
+  .stage-title {
+    font-size: 26px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 }
 
 .tile.tile-2 .tile-inner {
@@ -1107,6 +1167,9 @@ hr {
   font-size: 28px;
 }
 
+
+
+
 footer {
   margin-top: 100px;
   background: #f3951d;
@@ -1114,10 +1177,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .ieee-logo {
-  width: 300px;
-
+  width: 250px;
+  max-width: 90%;
 }
