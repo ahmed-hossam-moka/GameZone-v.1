@@ -1,4 +1,3 @@
-/* ----- General ----- */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +15,6 @@ body {
     color: #472f18;
 }
 
-/* ----- Header ----- */
 header {
     width: 100%;
     padding: 20px 40px;
@@ -24,7 +22,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #f3951d;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -34,7 +32,6 @@ header {
     font-weight: 700;
 }
 
-/* Desktop Nav */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -50,7 +47,6 @@ header {
     opacity: 0.7;
 }
 
-/* Mobile Menu Icon */
 .menu-icon {
     font-size: 32px;
     color: white;
@@ -58,7 +54,6 @@ header {
     display: none;
 }
 
-/* Mobile Slide Menu */
 .mobile-menu {
     position: absolute;
     top: 75px;
@@ -81,7 +76,6 @@ header {
     display: flex;
 }
 
-/* ----- Welcome Section ----- */
 .welcome {
     text-align: center;
     padding: 70px 20px;
@@ -101,7 +95,6 @@ header {
     color: #fffbe9;
 }
 
-/* ----- Games Grid ----- */
 .games-container {
     display: flex;
     justify-content: center;
@@ -110,7 +103,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Game Card */
 .game-card {
     background: #ffffffdd;
     padding: 20px;
@@ -124,7 +116,7 @@ header {
 
 .game-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .game-card img {
@@ -155,7 +147,6 @@ header {
     transform: scale(1.05);
 }
 
-/* ----- Footer ----- */
 footer {
     margin-top: 100px;
     background: #f3951d;
@@ -171,7 +162,6 @@ footer {
     max-width: 90%;
 }
 
-/* ----- Responsive ----- */
 @media (max-width: 900px) {
 
     .nav-links {
