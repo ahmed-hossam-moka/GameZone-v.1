@@ -1,6 +1,3 @@
-/* =======================
-   GLOBAL STYLE
-======================= */
 * {
     margin: 0;
     padding: 0;
@@ -14,13 +11,10 @@ body {
     line-height: 1.6;
 }
 
-/* =======================
-   HEADER
-======================= */
 header {
     padding: 20px 40px;
     background: #f3951d;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +51,6 @@ header {
     cursor: pointer;
 }
 
-/* ----- Mobile Menu ----- */
 .mobile-menu {
     position: absolute;
     top: 75px;
@@ -79,12 +72,11 @@ header {
     display: flex;
 }
 
-/* =======================
-   MAIN GAME
-======================= */
+
 main {
     max-width: 600px;
-    margin: 2rem auto;
+    margin: auto;
+    MARGIN-TOP: 130px;
     padding: 1rem;
 }
 
@@ -92,12 +84,11 @@ main {
     background: #fff3e0;
     border-radius: 14px;
     padding: 1.8rem;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     border: 3px solid #f7a01f;
 }
 
-/* Game Info */
 .game-info h2 {
     color: #d35400;
     text-transform: uppercase;
@@ -112,7 +103,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Scoreboard */
 .score-board {
     display: flex;
     justify-content: center;
@@ -138,9 +128,7 @@ main {
     margin-top: 0.2rem;
 }
 
-/* =======================
-   GAME BOARD
-======================= */
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,7 +155,6 @@ main {
     background-color: #ffe0b2;
 }
 
-/* X and O colors - ORANGE THEME */
 .cell.x {
     color: #e65100;
 }
@@ -181,9 +168,7 @@ main {
     border-color: #27ae60;
 }
 
-/* =======================
-   BUTTONS
-======================= */
+
 .controls {
     display: flex;
     justify-content: center;
@@ -218,9 +203,7 @@ button {
     background-color: #27ae60;
 }
 
-/* =======================
-   FOOTER
-======================= */
+
 footer {
     margin-top: 100px;
     background: #f3951d;
@@ -236,15 +219,8 @@ footer {
     max-width: 90%;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 500px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+
+@media (max-width: 900px) {
 
     .nav-links {
         display: none;
@@ -254,8 +230,16 @@ footer {
         display: block;
     }
 
-    .controls {
-        flex-direction: column;
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .top-title {
+        font-size: 45px;
+    }
+
+    .stage-title {
+        font-size: 26px;
     }
 
     footer {
