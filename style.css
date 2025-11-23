@@ -1,12 +1,12 @@
-/* ----- General ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 a {
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
 }
 
@@ -15,15 +15,14 @@ body {
     color: #472f18;
 }
 
-/* ----- Header ----- */
 header {
     width: 100%;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f7a01f;
-    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    background: #f3951d;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -33,7 +32,6 @@ header {
     font-weight: 700;
 }
 
-/* Desktop Nav */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -49,7 +47,6 @@ header {
     opacity: 0.7;
 }
 
-/* Mobile Menu Icon */
 .menu-icon {
     font-size: 30px;
     color: white;
@@ -57,7 +54,6 @@ header {
     display: none;
 }
 
-/* ----- Mobile Slide Menu ----- */
 .mobile-menu {
     position: absolute;
     top: 75px;
@@ -80,7 +76,6 @@ header {
     display: flex;
 }
 
-/* ----- Welcome Section ----- */
 .welcome {
     text-align: center;
     padding: 70px 20px;
@@ -116,7 +111,6 @@ header {
     animation: fadeIn 1s ease;
 }
 
-/* Input Field */
 .playername {
     width: 280px;
     padding: 14px 18px;
@@ -134,7 +128,6 @@ header {
     box-shadow: 0 0 0 3px #f3951d;
 }
 
-/* Button */
 .explore-button {
     background: linear-gradient(135deg, #f3951d, #f3951d);
     color: white;
@@ -154,13 +147,18 @@ header {
     box-shadow: 0 8px 18px #f3951d;
 }
 
-/* Fade-in Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0px); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
-/* ----- Footer ----- */
 footer {
     margin-top: 100px;
     background: #f3951d;
@@ -176,22 +174,17 @@ footer {
     max-width: 90%;
 }
 
-/* -------------------------------------------- Responsive -------------------------------- */
 
-/* Tablets + Mobile */
 @media (max-width: 900px) {
 
-    /* Make logo smaller */
     .logo-text {
         font-size: 24px;
     }
 
-    /* Hide desktop nav */
     .nav-links {
         display: none;
     }
 
-    /* Show mobile menu icon */
     .menu-icon {
         display: block;
     }
@@ -221,7 +214,6 @@ footer {
     }
 }
 
-/* Very Small Phones */
 @media (max-width: 500px) {
     .top-title {
         font-size: 36px;
