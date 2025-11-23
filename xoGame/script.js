@@ -1,4 +1,3 @@
-// ttt-script.js
 document.addEventListener("DOMContentLoaded", function () {
   const cells = document.querySelectorAll(".cell");
   const statusDisplay = document.getElementById("status");
@@ -18,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
-    [6, 7, 8], // rows
+    [6, 7, 8],
     [0, 3, 6],
     [1, 4, 7],
-    [2, 5, 8], // columns
+    [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6], // diagonals
+    [2, 4, 6],
   ];
 
   const messages = {
@@ -32,31 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
     gameDraw: () => `Game ended in a draw!`,
   };
 
-  // Handle cell click
   function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute("data-index"));
 
-    // Check if cell is already played or game is not active
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
       return;
     }
 
-    // Update game state and UI
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.textContent = currentPlayer;
     clickedCell.classList.add(currentPlayer.toLowerCase());
 
-    // Check game result
     checkResult();
   }
 
-  // Check result after each move
   function checkResult() {
     let roundWon = false;
     let winningCells = [];
 
-    // Check winning conditions
     for (let i = 0; i < winningConditions.length; i++) {
       const [a, b, c] = winningConditions[i];
 
@@ -71,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Handle win
     if (roundWon) {
       highlightWinningCells(winningCells);
       statusDisplay.textContent = messages.gameWon();
@@ -80,18 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Handle draw
     if (!gameState.includes("")) {
       statusDisplay.textContent = messages.gameDraw();
       gameActive = false;
       return;
     }
 
-    // Continue game with next player
     changePlayer();
   }
 
-  // Highlight winning cells
   function highlightWinningCells(cells) {
     cells.forEach((index) => {
       document
@@ -100,13 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Change player turn
   function changePlayer() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.textContent = messages.playerTurn();
   }
 
-  // Update score when a player wins
   function updateScore() {
     scores[currentPlayer]++;
 
@@ -117,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Reset current game
   function resetGame() {
     gameActive = true;
     currentPlayer = "X";
@@ -130,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Start completely new game (reset scores)
   function newGame() {
     resetGame();
     scores = { X: 0, O: 0 };
@@ -138,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     scoreO.textContent = "0";
   }
 
-  // Event listeners
   cells.forEach((cell) => {
     cell.addEventListener("click", handleCellClick);
   });
@@ -146,6 +130,5 @@ document.addEventListener("DOMContentLoaded", function () {
   resetButton.addEventListener("click", resetGame);
   newGameButton.addEventListener("click", newGame);
 
-  // Initialize game
   statusDisplay.textContent = messages.playerTurn();
 });
