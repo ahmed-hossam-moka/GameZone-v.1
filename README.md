@@ -85,8 +85,8 @@ PAGES/
 
 ## 👤 Author
 
-**Ahmed Hossam**
-**Jana**
+* **Ahmed Hossam**
+* **Jana**
 
 A simple multi‑game project made for learning and creativity.
 
