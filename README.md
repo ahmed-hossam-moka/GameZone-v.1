@@ -63,7 +63,9 @@ PAGES/
 3. Navigate between pages normally.
 4. Play any game from the **Games** page.
 
-> ✔ No server required — works fully offline.
+OR 
+
+> ✔ live link: https://ahmed-hossam-moka.github.io/GameZone-v.1/
 
 ---
 
