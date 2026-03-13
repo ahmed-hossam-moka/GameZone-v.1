@@ -3,6 +3,7 @@
 ## 🎮 Overview
 
 Game Zone is a simple multi‑page web project that includes a home page, an About page, a games list page, and multiple mini‑games such as **2048** and **XO**. The project is fully built with **HTML**, **CSS**, and **JavaScript**, and organized into a clean folder structure.
+and for live demo: https://ahmed-hossam-moka.github.io/GameZone-v.1/
 
 This README explains everything you need to understand, run, and upload the project.
 
